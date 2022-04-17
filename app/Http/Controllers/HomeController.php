@@ -8,6 +8,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return "家計簿アプリ";
+        return view("home/index");
     }
 }
