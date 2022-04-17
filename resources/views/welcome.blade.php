@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
     <h1>家計簿アプリです</h1>
 </body>
 </html>
