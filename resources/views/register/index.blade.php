@@ -36,9 +36,9 @@
                   <label for="email">メールアドレス</label>
                   <input type="text" class="form-control" name="email" id="email" value="{{ old('email') }}" />
                   <label for="password">パスワード</label>
-                  <input type="text" class="form-control" name="password" id="password" />
-                  <label for="confirm-password">確認用パスワード</label>
-                  <input type="text" class="form-control" name="confirm-password" id="confirm-password" />
+                  <input type="password" class="form-control" name="password" id="password" />
+                  <label for="password_confirmation">確認用パスワード</label>
+                  <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" />
                 </div>
                 <div class="text-right">
                   <button type="submit" class="btn btn-primary">送信</button> 

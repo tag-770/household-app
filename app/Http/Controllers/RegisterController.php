@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Http\Requests\CreateFolder;
+use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
@@ -15,18 +16,16 @@ class RegisterController extends Controller
 
     public function create(CreateFolder $request)
     {
-        // dd($request->all());
-    // フォルダモデルのインスタンスを作成する
-    $user = new User();
-    // タイトルに入力値を代入する
-    $user->name = $request->username;
-    $user->email = $request->email;
-    $user->password = $request->password;
-    // インスタンスの状態をデータベースに書き込む
-    $user->save();
-
-    return redirect()->route('home.index', [
-        'id' => $user->id,
-    ]);
+        // フォルダモデルのインスタンスを作成する
+        $user = new User();
+        // タイトルに入力値を代入する
+        $user->name = $request->username;
+        $user->email = $request->email;
+        $hashed_password =Hash::make($request->password);
+        $user->password = $hashed_password;
+        // インスタンスの状態をデータベースに書き込む
+        $user->save();
+        
+        return redirect()->route('home');
     }
 }
