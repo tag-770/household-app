@@ -32,10 +32,10 @@ class CreateFolder extends FormRequest
 
     public function attributes()
     {
-    return [
-        'username' => 'ユーザー名',
-        'email' => 'メールアドレス',
-        'password' => 'パスワード',
-    ];
+        return [
+            'username' => 'ユーザー名',
+            'email' => 'メールアドレス',
+            'password' => 'パスワード',
+        ];
     }
 }

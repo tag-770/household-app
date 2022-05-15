@@ -13,5 +13,6 @@
         }
     </style>
     <h1>家計簿アプリです</h1>
+    <a href="{{ route('login') }}">ログイン</a>
 </body>
 </html>
