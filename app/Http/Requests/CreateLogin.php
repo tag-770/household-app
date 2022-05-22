@@ -24,7 +24,6 @@ class CreateFolder extends FormRequest
     public function rules()
     {
         return [
-            'username' => 'required|min:8', 
             'email' => 'required|email|max:100|unique:users,email',
             'password' => 'required|min:6|confirmed',
         ];
@@ -33,7 +32,6 @@ class CreateFolder extends FormRequest
     public function attributes()
     {
         return [
-            'username' => 'ユーザー名',
             'email' => 'メールアドレス',
             'password' => 'パスワード',
         ];
