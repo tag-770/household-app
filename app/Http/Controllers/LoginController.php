@@ -27,4 +27,10 @@ class LoginController extends Controller
         return back();
         
     } 
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('toppage');
+    }
 }
