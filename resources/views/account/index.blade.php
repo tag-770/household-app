@@ -28,7 +28,7 @@
                   </ul>
                 </div>
               @endif
-              <form action="{{ route('login') }}" method="post">
+              <form action="{{ route('accountcreate') }}" method="post">
                 @csrf
                 <div class="form-group">
                   <label for="name">名前</label>
