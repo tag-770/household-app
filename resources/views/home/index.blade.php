@@ -9,5 +9,6 @@
 <body>
     <h1>家計簿アプリ</h1>
     <a href="{{ route('logout') }}">ログアウト</a>
+    <a href="{{ route('accountcreate') }}">家計簿登録</a>
 </body>
 </html>
