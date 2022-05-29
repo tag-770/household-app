@@ -34,7 +34,7 @@
                   <label for="name">名前</label>
                   <input type="text" class="form-control" name="name" id="name"  />
                   <label for="amountofmoney">金額</label>
-                  <input type="number" class="form-control" name="amountofmoney" id="amountofmoney" />
+                  <input type="text" class="form-control" name="amountofmoney" id="amountofmoney" />
                   <label for="memo">メモ</label>
                   <input type="memo" class="form-control" name="memo" id="memo" />
                 </div>
