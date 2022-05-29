@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>家計簿アプリ</h1>
-    
+    <a href="{{ route('logout') }}">ログアウト</a>
 </body>
 </html>
