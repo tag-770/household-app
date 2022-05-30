@@ -25,5 +25,5 @@ Route::post('/register', [RegisterController::class, 'create']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::get('/account/create', [HomeController::class, 'accountcreate'])->name('accountcreate');
-Route::post('/account/create', [HomeController::class, 'accountsend']);
+Route::get('/account/create', [AccountController::class, 'accountcreate'])->name('accountcreate');
+Route::post('/account/create', [AccountController::class, 'accountsend']);

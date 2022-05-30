@@ -10,14 +10,4 @@ class HomeController extends Controller
     {
         return view("home/index");
     }
-
-    public function accountcreate()
-    {
-        return view("account/index");
-    }
-
-    public function accountsend()
-    {
-        return redirect()->route('home');
-    }
 }
