@@ -15,4 +15,9 @@ class HomeController extends Controller
     {
         return view("account/index");
     }
+
+    public function accountsend()
+    {
+        return redirect()->route('home');
+    }
 }
