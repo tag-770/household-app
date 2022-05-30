@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AccountController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +27,5 @@ Route::post('/register', [RegisterController::class, 'create']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::get('/account/create', [HomeController::class, 'accountcreate'])->name('accountcreate');
+Route::get('/account/create', [AccountController::class, 'accountcreate'])->name('accountcreate');
+Route::post('/account/create', [AccountController::class, 'accountsend']);

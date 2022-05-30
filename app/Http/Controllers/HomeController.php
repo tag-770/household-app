@@ -10,9 +10,4 @@ class HomeController extends Controller
     {
         return view("home/index");
     }
-
-    public function accountcreate()
-    {
-        return view("account/index");
-    }
 }
