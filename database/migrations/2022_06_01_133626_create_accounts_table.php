@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('accounts', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('title');
             $table->integer('amount');
             $table->text('memo');
+            $table->timestamps();
         });
     }
 
