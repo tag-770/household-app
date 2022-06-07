@@ -12,13 +12,9 @@ class AccountController extends Controller
         return view("account/index");
     }
 
-    public function accountsend()
+    public function accountsend(Request $request)
     {
-        return redirect()->route('home');
-    }
-
-    public function create()
-    {
+        dd();
         //インスタンス作成
         $account = new Account();
 
@@ -29,6 +25,12 @@ class AccountController extends Controller
             'amount' => $request->amount,
             'memo' => $request->memo,
         ]);
+        dd();
+
         return redirect()->route('home');
     }
-}
+        
+ }
+
+    
+

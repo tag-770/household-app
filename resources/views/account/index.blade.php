@@ -31,10 +31,10 @@
               <form action="{{ route('accountcreate') }}" method="post">
                 @csrf
                 <div class="form-group">
-                  <label for="name">名前</label>
-                  <input type="text" class="form-control" name="name" id="name"  />
-                  <label for="amountofmoney">金額</label>
-                  <input type="text" class="form-control" name="amountofmoney" id="amountofmoney" />
+                  <label for="title">名前</label>
+                  <input type="text" class="form-control" name="title" id="title"  />
+                  <label for="amount">金額</label>
+                  <input type="text" class="form-control" name="amount" id="amount" />
                   <label for="memo">メモ</label>
                   <input type="memo" class="form-control" name="memo" id="memo" />
                 </div>
