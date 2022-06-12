@@ -14,7 +14,6 @@ class AccountController extends Controller
 
     public function accountsend(Request $request)
     {
-        dd();
         //インスタンス作成
         $account = new Account();
 
@@ -25,7 +24,6 @@ class AccountController extends Controller
             'amount' => $request->amount,
             'memo' => $request->memo,
         ]);
-        dd();
 
         return redirect()->route('home');
     }
