@@ -14,11 +14,6 @@ class AccountController extends Controller
 
     public function accountsend(Request $request)
     {
-        //インスタンス作成
-        $account = new Account();
-
-        //$account = Account::create();
-
         Account::create([
             'title' => $request->title,
             'amount' => $request->amount,

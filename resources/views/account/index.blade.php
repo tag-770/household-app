@@ -36,7 +36,7 @@
                   <label for="amount">金額</label>
                   <input type="text" class="form-control" name="amount" id="amount" />
                   <label for="memo">メモ</label>
-                  <input type="memo" class="form-control" name="memo" id="memo" />
+                  <input type="text" class="form-control" name="memo" id="memo" />
                 </div>
                 <div class="text-right">
                   <button type="submit" class="btn btn-primary">送信</button> 
