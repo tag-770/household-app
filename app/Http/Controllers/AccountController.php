@@ -14,6 +14,12 @@ class AccountController extends Controller
 
     public function accountsend(Request $request)
     {
+        $request->validate([
+            'title' => ['required'],
+            'amount' => ['required', 'integer', 'min:1'],
+            'memo' => ['required']
+        ]);
+
         Account::create([
             'title' => $request->title,
             'amount' => $request->amount,
