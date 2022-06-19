@@ -20,15 +20,6 @@
             <div class="panel-heading">家計簿登録</div>
             <div class="panel-body">
               <form action="{{ route('accountcreate') }}" method="post">
-              @if ($errors->any())
-	              <div class="alert alert-danger">
-	                <ul>
-	                  @foreach ($errors->all() as $error)
-	                    <li>{{ $error }}</li>
-	                  @endforeach
-	                </ul>
-	              </div>
-	            @endif
                 @csrf
                 <div class="form-group">
                   <label for="title">名前</label>
