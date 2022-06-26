@@ -13,12 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('accounts', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->integer('amount');
-            $table->text('memo');
-            $table->timestamps();
+        Schema::table('accounts', function (Blueprint $table) {
+            $table->text('memo')->nullable()->change(); 
         });
     }
 
