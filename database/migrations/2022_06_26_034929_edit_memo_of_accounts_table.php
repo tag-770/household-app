@@ -25,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('accounts');
+        Schema::table('accounts', function (Blueprint $table) {
+            $table->text('memo')->nullable(false)->change(); 
+        });
     }
 };
