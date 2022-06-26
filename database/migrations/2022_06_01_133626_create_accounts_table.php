@@ -17,9 +17,15 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->integer('amount');
-            $table->text('memo');
+            $table->text('memo')->nullable();
             $table->timestamps();
         });
+
+        Schema::table('accounts', function (Blueprint $table) {
+            $table->text('memo')->nullable()->change(); 
+        });
+
+
     }
 
     /**
