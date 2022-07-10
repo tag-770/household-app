@@ -14,6 +14,7 @@ class AccountController extends Controller
 
     public function accountsend(Request $request)
     {
+        dd('テスト');
         $request->validate([
             'title' => ['required'],
             'amount' => ['required', 'integer', 'min:1'],
