@@ -18,6 +18,7 @@ class Account extends Model
         'title',
         'amount',
         'memo',
+        'user_id',
     ];
 
     /**
