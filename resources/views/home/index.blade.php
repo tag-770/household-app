@@ -11,19 +11,19 @@
     <a href="{{ route('logout') }}">ログアウト</a>
     <a href="{{ route('accountcreate') }}">家計簿登録</a>
     <table>
-        <th>
+        <tr>
             <th>ID</th>
             <th>タイトル</th>
             <th>金額</th>
             <th>メモ</th>
-        </th>
+        </tr>
         @foreach($accounts as $account)
-            <td>
+            <tr>
                 <td>{{ $account->user_id }}</td>
                 <td>{{ $account->title }}</td>
                 <td>{{ $account->amount }}</td>
                 <td>{{ $account->memo }}</td>
-            </td>
+            </tr>
         @endforeach
     </table>
 </body>
