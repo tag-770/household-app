@@ -10,7 +10,6 @@ class HomeController extends Controller
     public function index()
     {
         $accounts = Account::all();
-        dd($accounts);
-        return view("home/index");
+        return view("home/index")->with('accounts',$accounts);;
     }
 }
