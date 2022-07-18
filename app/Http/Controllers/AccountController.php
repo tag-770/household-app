@@ -15,12 +15,12 @@ class AccountController extends Controller
 
     public function accountsend(Request $request)
     {
-        $user = Auth::id();
-
         $request->validate([
             'title' => ['required'],
             'amount' => ['required', 'integer', 'min:1'],
         ]);
+
+        $user = Auth::id();
 
         Account::create([
             'title' => $request->title,
