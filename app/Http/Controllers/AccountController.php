@@ -10,8 +10,6 @@ class AccountController extends Controller
 {
     public function accountcreate()
     {
-        $user = Auth::id();
-        dd($user);
         return view("account/index");
     }
 
@@ -22,10 +20,13 @@ class AccountController extends Controller
             'amount' => ['required', 'integer', 'min:1'],
         ]);
 
+        $user = Auth::id();
+
         Account::create([
             'title' => $request->title,
             'amount' => $request->amount,
             'memo' => $request->memo,
+            'user_id' => $user
         ]);
 
         return redirect()->route('home');
