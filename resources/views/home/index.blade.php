@@ -10,5 +10,21 @@
     <h1>家計簿アプリ</h1>
     <a href="{{ route('logout') }}">ログアウト</a>
     <a href="{{ route('accountcreate') }}">家計簿登録</a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>タイトル</th>
+            <th>金額</th>
+            <th>メモ</th>
+        </tr>
+        @foreach($accounts as $account)
+            <tr>
+                <td>{{ $account->user_id }}</td>
+                <td>{{ $account->title }}</td>
+                <td>{{ $account->amount }}</td>
+                <td>{{ $account->memo }}</td>
+            </tr>
+        @endforeach
+    </table>
 </body>
 </html>
