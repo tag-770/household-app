@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-  <header>
-  </header>
-  <main>
-     <h1>自分の家計簿一覧</h1>
-  </main>
+    <header>
+    </header>
+    <main>
+        <h1>自分の家計簿一覧</h1>
+    </main>
 </body>
 </html>
