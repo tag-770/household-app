@@ -31,6 +31,11 @@ class AccountController extends Controller
 
         return redirect()->route('home');
     }
+
+    public function accounts()
+    {
+        return view("accounts");
+    }
         
  }
 
