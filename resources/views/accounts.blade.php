@@ -12,7 +12,6 @@
     <main>
     <table>
         <tr>
-            <th>ID</th>
             <th>タイトル</th>
             <th>金額</th>
             <th>メモ</th>

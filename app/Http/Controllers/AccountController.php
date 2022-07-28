@@ -34,9 +34,9 @@ class AccountController extends Controller
 
     public function accounts()
     {
-        $user = Auth::id();
+        $user_id = Auth::id();
 
-        $users = Account::where('user_id', '=', $user)
+        $users = Account::where('user_id', '=', $user_id)
             ->get();
 
         return view("accounts")->with('accounts', $users);
