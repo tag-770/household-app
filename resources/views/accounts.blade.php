@@ -10,7 +10,19 @@
     <header>
     </header>
     <main>
-        <h1>自分の家計簿一覧</h1>
-    </main>
+    <table>
+        <tr>
+            <th>タイトル</th>
+            <th>金額</th>
+            <th>メモ</th>
+        </tr>
+        @foreach($accounts as $account)
+            <tr>
+                <td>{{ $account->title }}</td>
+                <td>{{ $account->amount }}</td>
+                <td>{{ $account->memo }}</td>
+            </tr>
+        @endforeach
+    </table>
 </body>
 </html>
