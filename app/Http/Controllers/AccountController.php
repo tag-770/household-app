@@ -20,13 +20,13 @@ class AccountController extends Controller
             'amount' => ['required', 'integer', 'min:1'],
         ]);
 
-        $user = Auth::id();
+        $user_id = Auth::id();
 
         Account::create([
             'title' => $request->title,
             'amount' => $request->amount,
             'memo' => $request->memo,
-            'user_id' => $user
+            'user_id' => $user_id
         ]);
 
         return redirect()->route('home');
@@ -36,10 +36,9 @@ class AccountController extends Controller
     {
         $user_id = Auth::id();
 
-        $users = Account::where('user_id', '=', $user_id)
-            ->get();
+        $my_account = Account::where('user_id', '=', $user_id)->get();
 
-        return view("accounts")->with('accounts', $users);
+        return view("accounts")->with('accounts', $my_account);
     }
         
  }
