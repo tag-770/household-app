@@ -29,7 +29,7 @@ class AccountController extends Controller
             'user_id' => $user_id
         ]);
 
-        return redirect()->route('home');
+        return redirect()->route('home')->with('success_account_register', '家計簿を正常に追加しました。');
     }
 
     public function accounts()
