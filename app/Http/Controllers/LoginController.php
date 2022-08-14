@@ -19,12 +19,10 @@ class LoginController extends Controller
     {
         $credentials = $request->only('email', 'password');
 
-        $user_id = Auth::id();
-
         if (Auth::attempt($credentials)) {
-            // $user_name = Account::where('user_id', '=', $user_id)->get();
-            // dd($user_name);
-            return redirect()->route('home')->with('success_login', '$user_nameさん、ようこそ');
+            $user = Auth::user();
+            $user_name = $user->name;
+            return redirect()->route('home')->with('success_login', $user_name.'さん、ようこそ');
         }
         return back();
         
