@@ -17,8 +17,8 @@
     @if (session('success_login'))
        <p style="color: green;">{{ session('success_login') }}</p>
     @endif
-    @if (session('success_logout'))
-       <p style="color: green;">{{ session('success_logout') }}</p>
+    @if (session('success_register'))
+       <p style="color: green;">{{ session('success_register') }}</p>
     @endif
     <table>
         <tr>

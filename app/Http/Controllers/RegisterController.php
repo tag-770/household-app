@@ -26,6 +26,6 @@ class RegisterController extends Controller
         // インスタンスの状態をデータベースに書き込む
         $user->save();
         
-        return redirect()->route('home');
+        return redirect()->route('home')->with('success_register', $user->name.'さん、初めまして');
     }
 }
