@@ -14,6 +14,9 @@
     @if (session('success_account_register'))
        <p style="color: green;">{{ session('success_account_register') }}</p>
     @endif
+    @if (session('success_login'))
+       <p style="color: green;">{{ session('success_login') }}</p>
+    @endif
     <table>
         <tr>
             <th>ID</th>
