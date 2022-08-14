@@ -29,7 +29,8 @@ class LoginController extends Controller
 
     public function logout()
     {
+        $user = Auth::user();
         Auth::logout();
-        return redirect()->route('toppage');
+        return redirect()->route('toppage')->with('success_logout', $user->name.'さん、お疲れ様でした。');
     }
 }

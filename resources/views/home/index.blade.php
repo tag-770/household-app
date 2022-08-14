@@ -17,6 +17,9 @@
     @if (session('success_login'))
        <p style="color: green;">{{ session('success_login') }}</p>
     @endif
+    @if (session('success_logout'))
+       <p style="color: green;">{{ session('success_logout') }}</p>
+    @endif
     <table>
         <tr>
             <th>ID</th>
