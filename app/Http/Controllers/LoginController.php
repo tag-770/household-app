@@ -22,9 +22,9 @@ class LoginController extends Controller
         $user_id = Auth::id();
 
         if (Auth::attempt($credentials)) {
-            $user_name = Account::where('user_id', '=', $user_id)->get();
-            dd($user_name);
-            return redirect()->route('home') >with('success_login', '$user_nameさん、ようこそ');
+            // $user_name = Account::where('user_id', '=', $user_id)->get();
+            // dd($user_name);
+            return redirect()->route('home')->with('success_login', '$user_nameさん、ようこそ');
         }
         return back();
         
