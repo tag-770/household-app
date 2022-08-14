@@ -21,8 +21,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
-            $user_name = $user->name;
-            return redirect()->route('home')->with('success_login', $user_name.'さん、ようこそ');
+            return redirect()->route('home')->with('success_login', $user->name.'さん、ようこそ');
         }
         return back();
         
