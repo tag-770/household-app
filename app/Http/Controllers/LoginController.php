@@ -20,9 +20,8 @@ class LoginController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-           // $request->session()->regenerate();
-
-            return redirect()->route('home');
+            $user = Auth::user();
+            return redirect()->route('home')->with('success_login', $user->name.'さん、ようこそ');
         }
         return back();
         
@@ -30,7 +29,8 @@ class LoginController extends Controller
 
     public function logout()
     {
+        $user = Auth::user();
         Auth::logout();
-        return redirect()->route('toppage');
+        return redirect()->route('toppage')->with('success_logout', $user->name.'さん、お疲れ様でした。');
     }
 }
