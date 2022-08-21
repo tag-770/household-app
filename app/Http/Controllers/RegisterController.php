@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Http\Requests\CreateFolder;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -25,6 +26,9 @@ class RegisterController extends Controller
         $user->password = $hashed_password;
         // インスタンスの状態をデータベースに書き込む
         $user->save();
+
+        $credentials = $request->only('email', 'password');
+        Auth::attempt($credentials);
         
         return redirect()->route('home')->with('success_register', $user->name.'さん、初めまして');
     }
