@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自分の家計簿 | 家計簿アプリ</title>
-</head>
-<body>
-    <header>
-    </header>
-    <main>
+<!-- <title>自分の家計簿 | 家計簿アプリ</title> -->
+
+@extends('layouts.app')
+@section('content')
     <table>
         <tr>
             <th>タイトル</th>
@@ -24,5 +16,4 @@
             </tr>
         @endforeach
     </table>
-</body>
-</html>
+@endsection
