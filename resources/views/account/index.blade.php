@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>家計簿登録 | 家計簿アプリ</title>
-</head>
-<body>
-  <header>
-    <!-- <nav class="my-navbar">
-      <a class="my-navbar-brand" href="/">ToDo App</a>
-    </nav> -->
-  </header>
-  <main>
+<!-- <title>家計簿登録 | 家計簿アプリ</title> -->
+
+@extends('layouts.app')
+@section('content')
     @if($errors->any())
       <ul>
         @foreach($errors->all() as $message)
@@ -30,6 +19,4 @@
         <input type="text" class="form-control" name="memo" id="memo" />
         <button type="submit" class="btn btn-primary">送信</button> 
     </form>
-  </main>
-</body>
-</html>
+@endsection
