@@ -11,8 +11,6 @@
     <main>
         @yield('content')
     </main>
-    <footer>
-        &copy; 2022 家計簿アプリ
-    </footer>
+@include('layouts.footer')
 </body>
 </html>
