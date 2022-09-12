@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', '家計簿アプリ')
 @section('content')
     @if (session('success_account_register'))
     <p style="color: green;">{{ session('success_account_register') }}</p>

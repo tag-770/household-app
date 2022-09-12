@@ -1,6 +1,5 @@
-<!-- <title>家計簿登録 | 家計簿アプリ</title> -->
-
 @extends('layouts.app')
+@section('title', '家計簿登録 | 家計簿アプリ')
 @section('content')
     @if($errors->any())
       <ul>

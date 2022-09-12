@@ -1,6 +1,5 @@
-<!-- <title>自分の家計簿 | 家計簿アプリ</title> -->
-
 @extends('layouts.app')
+@section('title', '自分の家計簿 | 家計簿アプリ')
 @section('content')
     <table>
         <tr>
