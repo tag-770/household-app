@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>家計簿アプリへようこそ</title>
 </head>
 <body>
-    <style>
-        h1 {
-            color: red;
-        }
-    </style>
     @if (session('success_logout'))
-       <p style="color: green;">{{ session('success_logout') }}</p>
+        <div class="text-center pt-5">
+            <p class="text-green-500">{{ session('success_logout') }}</p>
+        </div>
     @endif
-    <h1>家計簿アプリです</h1>
-    <a href="{{ route('login') }}">ログイン</a>
-    <a href="{{ route('register') }}">会員登録</a>
+    <nav class="w-full pt-2 pb-10">
+        <div class="justify-between  max-w-xs mx-auto pt-10">
+            <h1 class="flex items-center text-neutral-900 text-3xl font-bold mx-auto">家計簿アプリです</h1>
+                <div class="hidden -mx-4 lg:flex lg:items-center pt-5">
+                    <a href="{{ route('login') }}" class="block mx-4 mt-2 text-lg text-neutral-900 hover:opacity-75 capitalize  lg:mt-0">ログイン</a>
+                    <a href="{{ route('register') }}" class="block mx-4 mt-2 text-lg text-neutral-900 hover:opacity-75  capitalize lg:mt-0">会員登録</a>
+                </div>
+        </div>
+    </nav>
 </body>
 </html>
