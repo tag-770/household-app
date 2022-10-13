@@ -16,10 +16,10 @@
     <nav class="w-full pt-2 pb-10">
         <div class="justify-between  max-w-xs mx-auto pt-10">
             <h1 class="flex items-center text-neutral-900 text-3xl font-bold mx-auto">家計簿アプリです</h1>
-                <div class="hidden -mx-4 lg:flex lg:items-center pt-5">
-                    <a href="{{ route('login') }}" class="block mx-4 mt-2 text-lg text-neutral-900 hover:opacity-75 capitalize  lg:mt-0">ログイン</a>
-                    <a href="{{ route('register') }}" class="block mx-4 mt-2 text-lg text-neutral-900 hover:opacity-75  capitalize lg:mt-0">会員登録</a>
-                </div>
+            <div class="hidden -mx-4 lg:flex lg:items-center pt-5">
+                <a href="{{ route('login') }}" class="block mx-4 mt-2 text-lg text-neutral-900 hover:opacity-75 capitalize  lg:mt-0">ログイン</a>
+                <a href="{{ route('register') }}" class="block mx-4 mt-2 text-lg text-neutral-900 hover:opacity-75  capitalize lg:mt-0">会員登録</a>
+            </div>
         </div>
     </nav>
 </body>
