@@ -15,16 +15,16 @@
             <div class="w-full md:w-1/2 flex flex-col items-center " >
                 <h1 class="text-center text-2xl font-bold text-gray-600 mb-6">家計簿登録</h1>
                 <div class="w-3/4 mb-6">
-                <label for="title">名前</label>
-                    <input type="text" name="title" id="title" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 outline-blue-500" placeholder="○○費">
+                    <label for="title">名前</label>
+                        <input type="text" name="title" id="title" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 outline-blue-500" placeholder="○○費">
                 </div>
                 <div class="w-3/4 mb-6">
-                <label for="amount">金額</label>
-                    <input type="text" name="amount" id="amount" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 outline-blue-500 " placeholder="1000">
+                    <label for="amount">金額</label>
+                        <input type="text" name="amount" id="amount" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 outline-blue-500 " placeholder="1000">
                 </div>
                 <div class="w-3/4 mb-6">
-                <label for="memo">メモ</label>
-                    <input type="text" name="memo" id="memo" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 outline-blue-500 ">
+                    <label for="memo">メモ</label>
+                        <input type="text" name="memo" id="memo" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 outline-blue-500 ">
                 </div>
                 <!-- button -->
                 <div class="w-3/4 mt-4">
