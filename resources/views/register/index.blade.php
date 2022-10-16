@@ -4,51 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>新規ユーザー登録 | 家計簿アプリ</title>
 </head>
 <body>
-  <header>
-    <!-- <nav class="my-navbar">
-      <a class="my-navbar-brand" href="/">ToDo App</a>
-    </nav> -->
-  </header>
-  <main>
-    <div class="container">
-      <div class="row">
-        <div class="col col-md-offset-3 col-md-6">
-          <nav class="panel panel-default">
-            <div class="panel-heading">新規ユーザー登録</div>
-            <div class="panel-body">
-              @if($errors->any())
-                <div class="alert alert-danger">
-                  <ul>
-                    @foreach($errors->all() as $message)
-                      <li>{{ $message }}</li>
-                    @endforeach
-                  </ul>
-                </div>
-              @endif
-              <form action="{{ route('register') }}" method="post">
-                @csrf
-                <div class="form-group">
-                  <label for="username">ユーザー名</label>
-                  <input type="text" class="form-control" name="username" id="username" value="{{ old('username') }}" />
-                  <label for="email">メールアドレス</label>
-                  <input type="text" class="form-control" name="email" id="email" value="{{ old('email') }}" />
-                  <label for="password">パスワード</label>
-                  <input type="password" class="form-control" name="password" id="password" />
-                  <label for="password_confirmation">確認用パスワード</label>
-                  <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" />
-                </div>
-                <div class="text-right">
-                  <button type="submit" class="btn btn-primary">送信</button> 
-                </div>
-              </form>
-            </div>
-          </nav>
+    <header>
+    </header>
+    <main>
+    @if($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $message)
+                    <li>{{ $message }}</li>
+                @endforeach
+            </ul>
         </div>
-      </div>
-    </div>
+    @endif
+    <form action="{{ route('register') }}" method="post" class="">
+        @csrf
+        <div class="bg-gray-10 ">
+            <div class="flex justify-center h-screen w-screen items-center">
+                <div class="w-full md:w-1/2 flex flex-col items-center " >
+                    <h1 class="text-center text-2xl font-bold text-gray-600 mb-6">新規ユーザー登録</h1>
+                    <div class="w-3/4 mb-6">
+                        <label for="username">ユーザー名</label>
+                            <input type="text" name="username" id="username" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 outline-blue-500">
+                    </div>
+                    <div class="w-3/4 mb-6">
+                        <label for="amount">メールアドレス</label>
+                            <input type="email" name="email" id="email" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 outline-blue-500 ">
+                    </div>
+                    <div class="w-3/4 mb-6">
+                        <label for="memo">パスワード</label>
+                            <input type="password" name="password" id="password" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 outline-blue-500 ">
+                    </div>
+                    <div class="w-3/4 mb-6">
+                        <label for="memo">確認用パスワード</label>
+                            <input type="password" name="password_confirmation" id="password_confirmation" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 outline-blue-500 ">
+                    </div>
+                    <!-- button -->
+                    <div class="w-3/4 mt-4">
+                        <button type="submit" class="py-4 bg-blue-400 w-full rounded text-blue-50 font-bold hover:opacity-75"> 送信</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
   </main>
 </body>
 </html>
