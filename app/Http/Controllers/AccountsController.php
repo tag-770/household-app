@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use App\Models\Account;
 
 class AccountsController extends Controller
 {
-    public function accounts()
+    public function show()
     {
         return view("accounts/show");
     }
