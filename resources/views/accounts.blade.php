@@ -18,7 +18,7 @@
                                 @foreach($accounts as $account)
                                     <tr>
                                         <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                            <p class="text-gray-900 whitespace-no-wrap text-center">{{ $account->title }}</p>
+                                            <a href="{{ route('accounts.details') }}" class="text-gray-900 whitespace-no-wrap text-center">{{ $account->title }}</a>
                                         </td>
                                         <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                             <p class="text-gray-900 whitespace-no-wrap text-center">{{ $account->amount }}</p>

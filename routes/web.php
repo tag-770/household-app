@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\AccountsController;
 
 
 /*
@@ -30,3 +31,4 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/account/create', [AccountController::class, 'accountcreate'])->name('accountcreate');
 Route::post('/account/create', [AccountController::class, 'accountsend']);
 Route::get('/accounts', [AccountController::class, 'accounts'])->name('accounts');
+Route::get('/accounts/1', [AccountsController::class, 'show'])->name('accounts.details');
