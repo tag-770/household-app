@@ -31,4 +31,4 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/account/create', [AccountController::class, 'accountcreate'])->name('accountcreate');
 Route::post('/account/create', [AccountController::class, 'accountsend']);
 Route::get('/accounts', [AccountController::class, 'accounts'])->name('accounts');
-Route::get('/accounts/1', [AccountsController::class, 'show'])->name('accounts.details');
+Route::get('/accounts/{account_id}', [AccountsController::class, 'show'])->name('accounts.details');
