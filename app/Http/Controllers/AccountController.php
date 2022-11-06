@@ -26,7 +26,7 @@ class AccountController extends Controller
             'title' => $request->title,
             'amount' => $request->amount,
             'memo' => $request->memo,
-            'user_id' => $user_id
+            'user_id' => $user_id,
         ]);
 
         return redirect()->route('home')->with('success_account_register', '家計簿を正常に追加しました。');
