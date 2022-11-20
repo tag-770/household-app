@@ -41,6 +41,14 @@ class AccountController extends Controller
         return view("accounts")->with('accounts', $my_accounts);
     }
         
+    public function destroy($id)
+    {
+        $account = Account::find($id);
+        // レコードを削除
+        $account->delete();
+        // 削除したら一覧画面にリダイレクト
+        return redirect()->route('accounts');
+    }
  }
 
     
