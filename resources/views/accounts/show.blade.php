@@ -6,6 +6,10 @@
         @csrf
         <button type="submit" class="btn btn-danger">削除</button>
     </form>
+    <form class="text-right" action="{{ route('account.edit', ['id'=>$accounts->id]) }}" method="GET">
+        @csrf
+        <button type="submit" class="btn btn-danger">編集</button>
+    </form>
 </div>
 <table class="min-w-full leading-normal">
     <thead>

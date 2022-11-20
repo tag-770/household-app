@@ -49,6 +49,11 @@ class AccountController extends Controller
         // 削除したら一覧画面にリダイレクト
         return redirect()->route('accounts');
     }
+
+    public function edit()
+    {
+        return view("accounts/edit");
+    }
  }
 
     
