@@ -32,4 +32,5 @@ Route::get('/account/create', [AccountController::class, 'accountcreate'])->name
 Route::post('/account/create', [AccountController::class, 'accountsend']);
 Route::get('/accounts', [AccountController::class, 'accounts'])->name('accounts');
 Route::get('/accounts/{account_id}', [AccountsController::class, 'show'])->name('accounts.details');
+Route::post('/destroy{id}', [AccountController::class, 'destroy'])->name('account.destroy');
 
