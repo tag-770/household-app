@@ -50,9 +50,10 @@ class AccountController extends Controller
         return redirect()->route('accounts');
     }
 
-    public function edit()
+    public function edit($id)
     {
-        return view("accounts/edit");
+        $account = Account::where('id', $id)->first();
+        return view("accounts/edit")->with('account', $account);
     }
  }
 
